@@ -4,24 +4,6 @@
 
 ## 说明文档
 
-* 开始
-	* [环境要求](#environment)
-	* [开始](#get-started)
-	* [写一篇博文](#write-posts)
-* 各组成部分
-	* [侧边栏](#sidebar)
-	* [mini-about-me](#mini-about-me)
-	* [标签云](#featured-tags)
-	* [好友链接](#friends)
-	* [HTML5演示文档布局](#keynote-layout)
-* 评论与 Google/Baidu Analytics
-	* [评论](#comment)
-	* [网站分析](#analytics) 
-* 高级部分
-	* [自定义](#customization)
-	* [标题底图](#header-image)
-	* [搜索展示标题-头文件](#seo-title)
-
 #### Environment
 
 如果你安装了jekyll，那你只需要在命令行输入`jekyll serve`就能在本地浏览器预览主题。你还可以输入`jekyll serve --watch`，这样可以边修改边自动运行修改后的文件。
@@ -145,7 +127,7 @@ disqus_username: _你的用户名_
 
 ## 致谢
 
-1. 这个模板是从这里[黄玄的博客 | Hux Blog]((https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
+1. 这个模板是从这里[黄玄的博客 | Hux Blog](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
 
 
 
