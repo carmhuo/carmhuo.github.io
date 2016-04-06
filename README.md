@@ -1,4 +1,4 @@
-# Carm's blog 
+# [Carm's blog](http://loagosad.github.io) 
 
 ### [我的博客](http://loagosad.github.io)
 
@@ -123,11 +123,9 @@ disqus_username: _你的用户名_
 
 **最后**多说是支持分享的，如果你不想分享，请这样设置：`duoshuo_share: false`。
 
-```
-
 ## 致谢
 
-1. 这个模板是从这里[黄玄的博客 | Hux Blog](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
+1. 这个模板是从这里 [黄玄的博客](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
 
 
 
