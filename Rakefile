@@ -29,7 +29,7 @@ task :new do
 			file.puts "subtitle: #{@subtitle}"
 			file.puts "author: carm"
 			file.puts "date: #{Time.now}"
-			file.puts "header-img: img/home-pg-city.jpg"
+			file.puts "header-img: img/home-bg-city.jpg"
 			file.puts "categories: #{@categories}"
 			file.puts "tag: #{@tag}"
 			file.puts "---"
