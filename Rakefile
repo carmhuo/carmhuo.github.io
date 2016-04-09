@@ -4,7 +4,7 @@ require 'fileutils'
 
 desc "create new post"
 task :new do
-  puts "Please input POST url:"
+        puts "Please input POST url:"
 	@url = STDIN.gets.chomp
 	puts "Please input title of POST:"
 	@name = STDIN.gets.chomp
@@ -34,5 +34,5 @@ task :new do
 			file.puts "tag: #{@tag}"
 			file.puts "---"
 	end
-	exec "vi #{@post_name}"
+        exec "vi #{@post_name}"
 end

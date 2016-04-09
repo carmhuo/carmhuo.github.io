@@ -5,8 +5,8 @@ subtitle: 使用Docker容器构建Tomcat服务器
 author: carm
 date: 2016-04-08 18:06:21 +0800
 header-img: img/home-bg-city.jpg
-categories: jekyll
-tags: docker
+tags:
+    - Docker
 ---
 
 # Docker数据卷应用---构建Java应用服务
@@ -17,7 +17,7 @@ Docker容器是一种轻量级的虚拟技术，可以快速搭建好开发和�
 经过一上午亲自实践后，偷着午休时间记录下学习过程，以防遗忘。
 
 ## 关于数据卷
-数据卷是一个可供一个或多个容器使用的特殊目录，使用它可以达到以下效果 
+数据卷是一个可供一个或多个容器使用的特殊目录，使用它可以达到以下效果
 
 * 数据卷在容器间共享和重用
 * 数据卷在宿主机和容器之间共享目录
@@ -84,7 +84,7 @@ Docker容器是一种轻量级的虚拟技术，可以快速搭建好开发和�
     $ docker pull ubuntu:15.10
     # 使用ubuntu镜像作为专门用于挂载数据卷的容器
     $ docker run --volumes-from=tomcat1 -v $HOME/backup:/backup \
-      ubuntu:15.10 tar zcf /backup/www.tar.gz /usr/local/tomcat/webapps/ 
+      ubuntu:15.10 tar zcf /backup/www.tar.gz /usr/local/tomcat/webapps/
 
     # 将宿主机$HOME目录下的backup文件映射到容器的/backup目录，通过tar命令将/usr/local/tomcat/web	apps目录压缩打包到/backup数据卷中，
     # 该数据卷又映射到了宿主机$HOME/backup，故容器中的数    	据就保存到了宿主机中，文件名为：www.tar.gz
