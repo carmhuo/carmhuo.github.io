@@ -18,7 +18,7 @@ layout: default
 </header>
 
 <!-- Main Content -->
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
         {% if site.sidebar == false %}
 <!-- NO SIDEBAR -->
@@ -27,7 +27,7 @@ layout: default
                 {{ content }}
             </div>
     <!-- Sidebar Container -->
-            <div class="
+             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 sidebar-container">
@@ -63,24 +63,57 @@ layout: default
         {% else %}
 
 <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-    			{{ content }}
-    		</div>
     <!-- Sidebar Container -->
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
+                col-lg-2 col-lg-offset-2
+                col-md-2 col-md-offset-2
                 col-sm-12
                 col-xs-12
                 sidebar-container
-            ">
+            " style="margin-right:0;padding:0px 5px">
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <!-- <hr> --><p></p>
+                    <!-- <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5> -->
+                    <div class="short-about">
+                        {% if site.sidebar-avatar %}
+                            <img src="{{site.sidebar-avatar}}" />
+                        {% endif %}
+                        {% if site.sidebar-about-description %}
+                            <h3>{{site.author}}</h3>
+                        {% endif %}
+                        {% if site.sidebar-about-description %}
+                            <p>{{site.sidebar-about-description}}</p>
+                        {% endif %}
+
+
+                    </div>
+                </section>
+
+                <!--Created_time-->
+                  {% if site.create_time %}
+                    <section>
+                      <hr>
+                      <h5>{{site.create_time}}</h5>
+                    </section>
+                  {% endif %}
+
+                <!--categories -->
+                {% if site.carm-categories %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">CATEGORIES</a></h5>
+                    <div class="tags">
+                        {% for category in site.categories %}
+                          <a href="{{ category.baseurl }}/tags/#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">
+                              {{ category[0] }}
+                          </a>
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+
                 <!-- Featured Tags -->
                 {% if site.featured-tags %}
                 <section>
@@ -98,83 +131,74 @@ layout: default
                 </section>
                 {% endif %}
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
-                    <div class="short-about">
-                        {% if site.sidebar-avatar %}
-                            <img src="{{site.sidebar-avatar}}" />
-                        {% endif %}
-                        {% if site.sidebar-about-description %}
-                            <p>{{site.sidebar-about-description}}</p>
-                        {% endif %}
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            {% if site.RSS %}
-                            <li>
-                                <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.twitter_username %}
-                            <li>
-                                <a href="https://twitter.com/{{ site.twitter_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.zhihu_username %}
-                            <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.weibo_username %}
-                            <li>
-                                <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.facebook_username %}
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.github_username %}
-                            <li>
-                                <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                </section>
+                <!-- SNS Link -->
+                <!-- <section>
+                  <ul class="list-inline">
+                      {% if site.RSS %}
+                      <li>
+                          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                      {% if site.twitter_username %}
+                      <li>
+                          <a href="https://twitter.com/{{ site.twitter_username }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                      {% if site.zhihu_username %}
+                      <li>
+                          <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                      {% if site.weibo_username %}
+                      <li>
+                          <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                      {% if site.facebook_username %}
+                      <li>
+                          <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                      {% if site.github_username %}
+                      <li>
+                          <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      {% endif %}
+                  </ul>
+                </section> -->
+
                 <!-- Friends Blog -->
-                {% if site.friends %}
+                <!-- {% if site.friends %}
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
@@ -182,8 +206,19 @@ layout: default
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
-                {% endif %}
+                {% endif %} -->
     		</div>
         {% endif %}
+<!-- Post Container -->
+        <div class="
+                col-lg-6 col-lg-offset-2
+                col-md-6 col-md-offset-2
+                col-sm-12
+                col-xs-12
+                post-container
+            " style="margin:0px;padding:0px 5px">
+          {{ content }}
+        </div>
 	</div>
+
 </div>
