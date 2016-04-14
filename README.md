@@ -1,7 +1,7 @@
 # [Carm's blog](http://loagosad.github.io) 
 
 ### [我的博客](http://loagosad.github.io)
-
+![](img/myblog-home.jpg)
 ## 说明文档
 
 #### Environment
@@ -105,27 +105,11 @@ friends: [
 
 #### Comment
 
-博客不仅的多说[Duoshuo](http://duoshuo.com)评论系统，也支持disqus[Disqus](http://disqus.com)评论系统。
-
-disqus国际比较流行，界面也很大气、简介，如果有人评论，还能实时通知，直接回复通知的邮件就行了。缺点是评论必须要去注册一个disqus账号，分享一般只有Facebook和Twitter，另外在墙内加载速度略慢了一点。想要知道长啥样，可以看以前的版本点[这里](http://brucezhaor.github.io/about.html) 最下面就可以看到。
-
-多说国内主流社交软件都有分享按钮，登陆方便，比较好管理，就是界面丑了一点。当然你是可以自定义界面的css的，详情请看多说开发者文档。
-
-**首先**，你需要去注册一个账号，不管是disqus还是多说的。
-
-**其次**，你只需要在下面的yaml头文件中设置一下就可以了。
-
-```
-duoshuo_username: _你的用户名_
-# 或者
-disqus_username: _你的用户名_
-```
-
-**最后**多说是支持分享的，如果你不想分享，请这样设置：`duoshuo_share: false`。
+博客不仅支持多说[Duoshuo](http://duoshuo.com)评论系统，也支持disqus[Disqus](http://disqus.com)评论系统。
 
 ## 致谢
 
-1. 这个模板是从这里 [黄玄的博客](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
+ 这个模板是从这里 [黄玄的博客](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
 
 
 

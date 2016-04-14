@@ -4,7 +4,7 @@ title: Docker-构建Java应用服务
 subtitle: 使用Docker容器构建Tomcat服务器
 author: carm
 date: 2016-04-08 18:06:21 +0800
-header-img: img/home-bg-city.jpg
+header-img: img/home-bg.jpg
 categories: 技术
 tags:
     - Docker
