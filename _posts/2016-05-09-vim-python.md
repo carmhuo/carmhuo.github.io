@@ -26,7 +26,7 @@ Vundle其特色在于使用git来管理插件,更新方便，支持搜索，一�
 	
 	$ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   
-### 配置
+### 配置vim
 	touch ~/.vimrc
 
 添加内容：
@@ -45,7 +45,7 @@ Vundle其特色在于使用git来管理插件,更新方便，支持搜索，一�
 	 
 	" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 	Plugin 'vim-scripts/indentpython.vim'
-	Bundle 'Valloric/YouCompleteMe'
+	Plugin 'Valloric/YouCompleteMe'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'jistr/vim-nerdtree-tabs'
@@ -79,11 +79,11 @@ Vundle其特色在于使用git来管理插件,更新方便，支持搜索，一�
 * jistr/vim-nerdtree-tabs：tab键
 * tmhedberg/SimpylFold：代码折叠
 
-##### 手动配置自动补全功能
-github中有安装文档，可进行参考。[YouCompleteMe: a code-completion engine for Vim](https://github.com/Valloric/YouCompleteMe)
+##### YouCompleteMe配置详细过程
+YouCompleteMe项目托管在github上，且有详细安装文档，参考链接[YouCompleteMe: a code-completion engine for Vim](https://github.com/Valloric/YouCompleteMe#full-installation-guide)
 
 ### 结束
-抽点时间，写写文章，以备日后需要
+抽点时间，写写文章，以备日后需要。
 
 ### 参考文章：
 1. [Vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)
