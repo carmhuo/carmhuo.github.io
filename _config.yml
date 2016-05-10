@@ -87,17 +87,5 @@ friends: [
     {
         title: "Carm's Blog",
         href: "http://blog.jecarm.com"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
     }
 ]
