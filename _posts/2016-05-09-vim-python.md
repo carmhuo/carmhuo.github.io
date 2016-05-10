@@ -16,6 +16,7 @@ tag:
 * ubuntu15.10
 * vim7.4
 * python2.7
+
 > 确保vim支持python，查看方式 `vim --version | grep python` ,若出现`+python`字样，则vim支持python
 
 ### 安装Vundle插件管理器
