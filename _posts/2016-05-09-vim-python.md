@@ -21,13 +21,13 @@ tag:
 
 ### 安装Vundle插件管理器
 
-Vundle其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下。更换机器时，只需安装Vundle，并使用原先的配置，即可配置好vim
+Vundle其特色在于使用git来管理插件,更换机器时,只需安装Vundle,并使用原先的配置，即可配置好vim
 
-项目托管在github上 [https://github.com/gmarik/vundle](https://github.com/gmarik/vundle)
+项目托管在github上，链接：[https://github.com/gmarik/vundle](https://github.com/gmarik/vundle)
 
 ##### 安装命令
 	
-	$ git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+	$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   
 ### 配置vim
 	touch ~/.vimrc
@@ -44,23 +44,25 @@ Vundle其特色在于使用git来管理插件,更新方便，支持搜索，一�
 	"call vundle#begin('~/some/path/here')
 	 	
 	" let Vundle manage Vundle, required
-	Plugin 'gmarik/Vundle.vim'
+	Plugin 'VundleVim/Vundle.vim'
 	 
 	" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+	
 	Plugin 'vim-scripts/indentpython.vim'
-	Plugin 'Valloric/YouCompleteMe'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'jistr/vim-nerdtree-tabs'
 	Plugin 'tmhedberg/SimpylFold'
-	 
-	let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-	let g:SimpylFold_docstring_preview=1
-
+	"Plugin 'git://git.wincent.com/command-t.git'
+	"Plugin 'Valloric/YouCompleteMe'
+	
 	" All of your Plugins must be added before the following line
 	call vundle#end()            " required
 	filetype plugin indent on    " required
-	  
+	
+	let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+	let g:SimpylFold_docstring_preview=1
+	
 	"split navigations
 	nnoremap <C-J> <C-W><C-J>
 	nnoremap <C-K> <C-W><C-K>
