@@ -6,7 +6,7 @@ author: carm
 header-img: img/home-bg.jpg
 categories: Algorithms
 tag:
-  - algorithms
+  - algorithm
   - java
 ---
 # 动态规划(Dynamic Programming)
