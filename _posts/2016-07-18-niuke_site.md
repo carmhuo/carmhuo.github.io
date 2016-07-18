@@ -9,6 +9,24 @@ tag:
   - python
 ---
 
+<script type="text/javascript" language="javascript">
+function iFrameHeight() {
+
+var ifm= document.getElementById("iframepage");
+
+var subWeb = document.frames ? document.frames["iframepage"].document :
+
+ifm.contentDocument;
+
+if(ifm != null && subWeb != null) {
+
+ifm.height = subWeb.body.scrollHeight;
+
+}
+
+}
+
+</script> 
 # 牛客网用户群体分析
 > 本文属原创，欢迎转载，但请转载时注明出处
 
@@ -27,37 +45,38 @@ tag:
 ### 在校与在职
 
 经过数据的预处理，过滤掉一些空置，约1/6（17512个）的用户填写了该信息，统计结果：
-<p><iframe src="/img/niuke_images/pie_school_work.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/pie_school_work.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
+<!-- <p><iframe src="/img/niuke_images/pie_school_work.svg" width="100%" height="580" frameborder = "0" ></iframe></p> -->
 可以看出，牛客网的学生用户还是比较多的。
 
 ### 学校Top榜
 
 所有用户中只有约1/4（25327个）的用户填写有学校信息，过滤掉一些脏数据，下面是牛客网的用户所属学校分布信息：
-<p><iframe src="/img/niuke_images/pie_school.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/pie_school.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 
 ### 程序猿与程序媛
 
 约10000多用户填写了性别资料，对这些数据进行统计，结果表明：
-<p><iframe src="/img/niuke_images/pie_gender.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/pie_gender.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 男女比例大约为3：1，总的来说还是程序媛比较少。
 
 ### 期望的公司
 关于在校生所期望的公司分布（数据为10125）：
-<p><iframe src="/img/niuke_images/stu_company.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/stu_company.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 约有50%的学生想去BAT,当然这可能是因为BAT的待遇和发展前景比较好，基本上大部分学生择业方向为各大互联网公司。
 
 ### 感兴趣的工作
 在校女生统计数据为2037，结果如下：
-<p><iframe src="/img/niuke_images/girls_job.svg" width="100%" height="580" frameborder = "0"></iframe></p>
+<iframe src="/img/niuke_images/girls_job.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 在校男生统计数据为7289：
-<p><iframe src="/img/niuke_images/boys_job.svg"width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/boys_job.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 Java工程师与C++工程师可谓是众望所归，除此之外，前端工程师岗位看来也是女生的一个不错选择，男生选择算法和安卓工程师的也比较多。
 
 ### 西安电子科大在校生择业方向统计
 选取信息资料比较完整的762位西电在校生，统计结果：
-<p><iframe src="/img/niuke_images/xd_job.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/xd_job.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 大方向依然使Java和C++,不过西电的学子还是选择C++工程师的比较多。
-<p><iframe src="/img/niuke_images/xd_company.svg" width="100%" height="580" frameborder = "0" ></iframe></p>
+<iframe src="/img/niuke_images/xd_company.svg" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="580" id="iframepage" name="iframepage" onLoad="iFrameHeight()" ></iframe>
 西电想去华为的人也是比较多的。
 
 ### 总结
