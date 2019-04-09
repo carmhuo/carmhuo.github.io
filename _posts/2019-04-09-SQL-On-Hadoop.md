@@ -15,8 +15,7 @@ SQL On Hadoop解决方案为用户提供关系模型和SQL查询接口，并透�
 
 三层模型：
 
-![](img/sql-on-hadoop.jpg)
-
+![](https://github.com/loagosad/loagosad.github.io/blob/master/img/sql-on-hadoop.jpg)
 ### Hive
 Apache Hive数据仓库软件可以使用SQL来帮助读取、写入和管理驻留在分布式存储中的大型数据集。
 
