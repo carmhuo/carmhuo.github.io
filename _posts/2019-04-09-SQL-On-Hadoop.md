@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL On Hadoop
-subtitle: Hadoop SQL查询接口
+subtitle: SQL-on-Hadoop,Hive,Impala,Presto,Spark SQL
 author: carm
 date: 2019-09-04 20:40:42 +0800
 header-img: img/home-bg.jpg
@@ -15,7 +15,7 @@ SQL On Hadoop解决方案为用户提供关系模型和SQL查询接口，并透�
 
 三层模型：
 
-![](https://github.com/loagosad/loagosad.github.io/blob/master/img/sql-on-hadoop.jpg)
+![](img/sql-on-hadoop.jpg)
 ### Hive
 Apache Hive数据仓库软件可以使用SQL来帮助读取、写入和管理驻留在分布式存储中的大型数据集。
 
@@ -34,11 +34,12 @@ Apache Hive数据仓库软件可以使用SQL来帮助读取、写入和管理驻
 Hive支持部分标准SQL，具体参考：
 [https://cwiki.apache.org/confluence/display/Hive/Apache+Hive+SQL+Conformance](https://cwiki.apache.org/confluence/display/Hive/Apache+Hive+SQL+Conformance) 
 ### Impala
-Impala—实时SQL查询引擎，可快速查询Apache Hadoop HDFS和 HBase中的数据。
-
-Impala提供与Hive相同的metadata、SQL语法、ODBC驱动和用户接口，为批处理和实时处理提供了一个统一的平台。
-
-Impala是一个Apache 开源项目。
+* Impala是一个运行在Hadoop上的大规模并行处理（MPP）查询引擎
+* Impala是一个实时SQL查询引擎，可快速查询Apache Hadoop HDFS和 HBase中的数据
+* Impala提供与Hive相同的metadata、SQL语法、JDBC/ODBC驱动和用户接口，为批处理和实时处理提供了一个统一的平台
+* Impala可在已存在的Hive表上执行**交互式实时查询**，大都能在几秒或几分钟内返回查询结果
+* Impala默认使用Parquet文件格式
+* Impala是一个Apache 开源项目，是Cloudera公司基于Google Dremel的开源实现
 ### Presto
 Presto—分布式SQL查询引擎，主要针对GB和PB级的数据进行交互式分析查询。
 
@@ -52,3 +53,4 @@ Spark SQL——SQL查询引擎， 是 Apache Spark开源项目的一个模块，
 * Spark SQL可通过统一接口访问数据源，包括：Hive、Avro、Parquet、ORC、JSON、JDBC。
 * Spark SQL支持HiveQL语法、Hive SerDes和UDFs，并可以访问Hive数据仓库。
 * Spark SQL提供标准的JDBC/ODBC连接服务。
+* Spark SQL可使用SQL查询Hive表
