@@ -40,12 +40,12 @@ Hive支持部分标准SQL，具体参考：
 * Impala可在已存在的Hive表上执行**交互式实时查询**，大都能在几秒或几分钟内返回查询结果
 * Impala默认使用Parquet文件格式
 * Impala是一个Apache 开源项目，是Cloudera公司基于Google Dremel的开源实现
+
 ### Presto
-Presto—分布式SQL查询引擎，主要针对GB和PB级的数据进行交互式分析查询。
+* Presto—分布式SQL查询引擎，主要针对GB和PB级的数据进行交互式分析查询。
+* 目前，Facebook在300PB的集群中使用presto进行交互式分析查询。
+* Presto是一个开源项目。
 
-目前，Facebook在300PB的集群中使用presto进行交互式分析查询。
-
-Presto是一个开源项目。
 ### Spark SQL
 Spark SQL——SQL查询引擎， 是 Apache Spark开源项目的一个模块，主要负责对结构化数据的处理。
 
