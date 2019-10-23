@@ -26,12 +26,12 @@ Delta Lake是一个开源的存储层，提供***ACID事务能力***，***支持
 本次基于Delta Lake 0.4（当前最新版本）进行分析
 
 
-![delta + linux](img/delta/Delta-Lake3-Linux.png)
+![delta + linux](/img/delta/Delta-Lake3-Linux.png)
 
 
 Delta商业架构为：
 
-![商业架构](img/delta/Delta-Lake-marketecture-0423c.png)
+![商业架构](/img/delta/Delta-Lake-marketecture-0423c.png)
 
 > Tips:
 ***数据湖（data lake）:*** 数据湖是一个中心位置，它以原始格式保存大量数据，并且是一种组织高度多样化数据的方式。与将数据存储在文件或文件夹中的分层数据仓库（data warehouse）相比，数据湖使用平面架构来存储数据。数据湖支持所有类型（结构化、半结构化和非结构化）数据的存储，这意味着数据可以更灵活的格式保存，因此我们可以在准备使用它们时对其进行转换。您可以将各种类型的分析应用于数据，例如SQL查询，大数据分析，全文检索，实时分析，甚至可以使用机器学习来发现新的视野。
