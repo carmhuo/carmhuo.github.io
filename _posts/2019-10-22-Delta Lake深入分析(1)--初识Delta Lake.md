@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Delta Lake深入分析
+title: Delta Lake深入分析(1)
 subtitle: 初识Delta Lake
 author: Carm
 date: 2019-10-22 20:41:42 +0800
