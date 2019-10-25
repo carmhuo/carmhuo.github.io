@@ -18,14 +18,15 @@ Delta lake写数据方式与Spark写parquet方式基本一样，仅需要将`for
 Delta写数据分为两种模式，一种为append，另一种为overwrite。
 
 1. 使用append模式可以自动向已存在的表中添加数据，使用如下：
-
-    `df.write.format("delta").mode("append").save("/delta/events")`
+```
+df.write.format("delta").mode("append").save("/delta/events")
+```
 
 2. 如果需要自动替换表中所有数据，可以使用override模式，使用如下：
-
-  `df.write.format("delta").mode("overwrite").save("/delta/events")`
-
-  或，使用谓词匹配分区列来**覆盖分区数据**，下面的命令会覆盖掉`df`中一月份的数据。
+ ```
+ df.write.format("delta").mode("overwrite").save("/delta/events")
+ ```
+ 或，使用谓词匹配分区列来**覆盖分区数据**，下面的命令会覆盖掉`df`中一月份的数据。
 
   ```
   df.write
@@ -155,10 +156,12 @@ def write(txn: OptimisticTransaction, sparkSession: SparkSession): Seq[Action] =
   newFiles ++ deletedFiles
 }
 ```
-元数据更新操作`updateMetadata`主要支持：
-- schema更新
-- schema + partition列更新
-
+元数据更新操作`updateMetadata`主要包括下面五种情况
+- 如果用户第一次插入数据，则创建一个新的Metadata对象
+- 如果表的写模式为`overwrite`,参数`overwriteSchema=true`,且schema和分区列有更新，则使用新的schema和分区列替换原有信息
+- 如果写参数`mergeSchema=true`,schema有更新，但分区列不变，则将新schema和旧的进行合并
+- 如果`mergeSchema`和`overWriteSchema`没有置为`true`，且schema和分区列有变动，则直接抛出异常
+- 其它情况，不需要更新
 
 源码如下：
 ```
@@ -290,4 +293,4 @@ def writeFiles(
 
 **Delta Lake主要是在Spark写parquet数据上封装了一层事务操作，写数据操作会被记录到事务日志中，并进行持久化，以便后续Delta可以根据事务日志来构建表的状态。**
 
-顺便说一句，在Delta中事务日志是非常重要的，表的一切操作都是基于事务日志，所以事务日志不能损坏或丢失，否则表中可能会出现脏数据。
+顺便说一句，在Delta中事务日志是非常重要的，表的一切操作都是基于事务日志，所以事务日志不能损坏或丢失，否则表中可能会出现数据混乱。
