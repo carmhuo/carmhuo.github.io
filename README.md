@@ -107,9 +107,5 @@ friends: [
 
 博客不仅支持多说[Duoshuo](http://duoshuo.com)评论系统，也支持disqus[Disqus](http://disqus.com)评论系统。
 
-## 致谢
-
- 这个模板是从这里 [黄玄的博客](https://github.com/Huxpro/huxpro.github.io/)  forked 的。 感谢这个作者
-
 
 
